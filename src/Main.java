@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 		Parking parking = new Parking();
@@ -41,5 +43,23 @@ public class Main {
 		System.out.println(plaza.getDireccion());
 		System.out.println(plaza.getNumBares());
 		System.out.println();
+		
+		
+		Hashtable<String, String> direccion  = new Hashtable<String, String>();
+		//Hashtable<> direccion  = new Hashtable<>();
+		String num = new String("27");//se puede declarar un número antes de utilizarlo
+		direccion.put("calle","Egia");
+		direccion.put("numero", num);
+		direccion.put("ciudad","Donostia - San Sebastian");
+		direccion.put("provincia","Gipuzkoa");
+
+        String miciudad  = (String) direccion.get("ciudad");
+        String miprovincia  = (String) direccion.get("provincia");
+		String micalle = (String) direccion.get("calle");
+		String minumero = (String) direccion.get("numero");
+
+		System.out.println("Direccion : " + micalle + " " + minumero);
+		System.out.println("Lugar: " + miciudad + ", " + miprovincia);
+		
 	}
 }
